@@ -1,7 +1,7 @@
 let deadCounter = document.getElementById("dead");
 let missCounter = document.getElementById("lost");
 
-for (let i = 0; ++i; i < 10) {
+for (let i = 1; i < 10; ++i) {
   let id = "hole" + ("" + i);
   let elem = document.getElementById(id);
   console.log(elem);
