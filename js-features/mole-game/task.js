@@ -1,5 +1,5 @@
-let deadCounter = document.getElementById("dead").textContent;
-let missCounter = document.getElementById("lost").textContent;
+let deadCounter = document.getElementById("dead");
+let missCounter = document.getElementById("lost");
 
 for (let i = 0; ++i; i < 10) {
   let id = "hole" + ("" + i);
@@ -8,19 +8,19 @@ for (let i = 0; ++i; i < 10) {
   //console.log(deadCounter);
   elem.onclick = () => {
     if (elem.classList.contains("hole_has-mole")) {
-      deadCounter++;
+      deadCounter.textContent++;
     } else {
-      missCounter++;
+      missCounter.textContent++;
     }
-    if (deadCounter === 10) {
+    if (+deadCounter.textContent === 10) {
       alert("Победа");
-      deadCounter = 0;
-      missCounter = 0;
+      deadCounter.textContent = 0;
+      missCounter.textContent = 0;
     }
-    if (missCounter === 5) {
+    if (+missCounter.textContent === 5) {
       alert("Проигрыш");
-      deadCounter = 0;
-      missCounter = 0;
+      deadCounter.textContent = 0;
+      missCounter.textContent = 0;
     }
   };
 }
